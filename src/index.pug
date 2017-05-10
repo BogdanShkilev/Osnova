@@ -1,0 +1,37 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+	head(lang="ru")
+		include pug/metatags.pug
+		+title('Главная')
+		include pug/styles.pug
+
+	body
+		include pug/svg.pug
+		nav(id="menu")
+			h2 Menu
+		.wrapper.main-page(id="panel")
+			include pug/main_page_header.pug
+			main(class="content")
+				.about-us
+					.container
+						.section-title
+							.row
+								.small-12.medium-12.columns
+									div.rect-dec
+										h3 why choose us
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.about-us-list
+							.row.d-reverse
+								.small-12.medium-5.columns
+									<picture>
+										<source media="(min-width: 900px)" srcset="images/photo-2.jpg">
+										<source media="(min-width: 500px)" srcset="images/photo-2-small.jpg">
+										img(src="images/photo-2.jpg" sizes="100vw")
+								.small-12.medium-6.columns
+
+
+
+		include pug/scripts.pug

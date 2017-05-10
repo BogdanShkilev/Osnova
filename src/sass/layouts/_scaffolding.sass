@@ -1,0 +1,77 @@
+*
+	box-sizing: border-box
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+	appearance: none
+
+
+.site-container
+	margin: 0 auto
+	padding:
+		left: rem-calc(map-get($grid-column-gutter, small))
+		right: rem-calc(map-get($grid-column-gutter, small))
+	+breakpoint(medium)
+		max-width: $global-width + rem-calc(map-get($grid-column-gutter, medium))
+		padding:
+			left: rem-calc(map-get($grid-column-gutter, medium)) / 2
+			right: rem-calc(map-get($grid-column-gutter, medium)) / 2
+a:hover
+	color: $main-text-color-hover
+
+body
+	overflow-x: hidden
+	min-width: rem-calc(320)
+	padding-bottom: 100px
+.wrapper
+	color: $main-text-color
+.container
+	margin: 0 auto
+	max-width: $global-width
+	position: relative
+.rect-dec
+	position: relative
+	display: inline-block
+
+	h3
+		position: relative
+		color: $main-text-color
+		font-weight: bold
+		text-transform: uppercase
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 43%
+		left: 0
+		width: rem-calc(67)
+		height: $vertical-gutter * 3.3
+		background: $second-main-color
+		@media only screen and (max-width: 64.063em)
+				height: $vertical-gutter * 2
+
+.btn
+	padding: $vertical-gutter * 2 rem-calc(40)
+	text-transform: uppercase
+	font-size: rem-calc(14)
+	font-weight: $font-family-main-bold
+	color: #fff
+	background: $second-main-color
+
+	&:hover
+		color: #fff
+		background: darken($second-main-color, 10%)
+.section-title
+	text-align: center
+
+	p
+		max-width: rem-calc(765)
+		margin: 0 auto

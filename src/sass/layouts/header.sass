@@ -1,0 +1,123 @@
+.nav-section
+	margin-bottom: $vertical-gutter * 15
+	padding-top: $vertical-gutter * 3
+.mp-header
+	position: relative
+	margin-bottom: $vertical-gutter * 31.25
+
+	&:before
+		display: block
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		background: #fff
+		opacity: .8
+	&:after
+		display: block
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: url(../images/mp-header-bg.jpg) no-repeat / cover
+		z-index: -1
+		filter: grayscale(100%)
+
+	@media only screen and (max-width: 64.063em)
+		margin-bottom: $vertical-gutter * 10
+
+.logo
+	float: right
+	font-weight: bold
+	text-transform: uppercase
+	color: $main-text-color
+.slideout-menu
+	display: none
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 256px
+	min-height: 100vh
+	-webkit-overflow-scrolling: touch
+	z-index: 0
+
+.slideout-menu-left
+	left: 0
+
+.slideout-menu-right
+	right: 0
+
+.slideout-panel
+	position: relative
+	z-index: 1
+	will-change: transform
+	background-color: #FFF
+	min-height: 100vh
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel
+	overflow: hidden
+
+.slideout-open .slideout-menu
+	display: block
+.greet
+	display: flex
+	flex-direction: column
+	justify-content: center
+.greet-pref
+	display: inline-block
+	margin: 0 auto
+	padding: $vertical-gutter / 2 rem-calc(20)
+	font-weight: bold
+	font-size: 18px
+	color: $main-text-color 
+	text-transform: uppercase
+	background: $second-main-color
+.greet-label
+	display: inline-block
+	margin: 0 auto $vertical-gutter * 3
+	border: rem-calc(10) solid $main-text-color
+	padding: 0 rem-calc(37)
+	text-transform: uppercase
+	text-align: center
+	font-weight: bold
+	font-size: 48px
+	color: $main-text-color
+
+	@media only screen and (max-width: 64.063em)
+		padding: 0 rem-calc(20)
+.greet-text
+	display: inline-block
+	margin: 0 auto $vertical-gutter * 16
+	max-width: rem-calc(550)
+	text-align: center
+	font-size: 16px
+	color: $main-text-color 
+
+	@media only screen and (max-width: 64.063em)
+		margin-bottom:  0
+.top-news
+	position: relative
+	bottom: -$vertical-gutter * 10
+	color: $main-text-color
+
+	img
+		@media only screen and (max-width: 64.063em)
+			margin-bottom: $vertical-gutter * 2
+	p
+		margin-bottom: $vertical-gutter * 2.3
+
+		@media only screen and (max-width: 64.063em)
+			margin-bottom: $vertical-gutter * 5
+	a
+		position: absolute
+		right: rem-calc(15)
+		bottom: rem-calc(57)
+		@media only screen and (max-width: 64.063em)
+			bottom: rem-calc(-27)
+	@media only screen and (max-width: 64.063em)
+		position: static
+

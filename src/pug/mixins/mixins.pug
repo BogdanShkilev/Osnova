@@ -1,0 +1,9 @@
+include svg-icon.pug
+include title.pug
+
+mixin atrList(className,title, ...items)
+	div(class=className)
+		h3 title
+		ul
+			each item in items
+				li= item
